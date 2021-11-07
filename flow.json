@@ -1,0 +1,363 @@
+[{
+        "id": "bb6423253111e81f",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f6ee70cb740cea7d",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7970f240a256399c",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "29eab4f4b39bb9e7",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "25aca4db42a5327e",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "29eab4f4b39bb9e7",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3ab8810a7cbd44fc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "28d24b65965c5830",
+        "type": "ui_spacer",
+        "z": "bb6423253111e81f",
+        "name": "spacer",
+        "group": "7970f240a256399c",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a9e887a50142befc",
+        "type": "ui_spacer",
+        "z": "bb6423253111e81f",
+        "name": "spacer",
+        "group": "7970f240a256399c",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6bfce7d194cf4899",
+        "type": "mqtt in",
+        "z": "bb6423253111e81f",
+        "name": "",
+        "topic": "sensors/temperature",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6ee70cb740cea7d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 120,
+        "wires": [
+            [
+                "3cf4e115e7a3dddf",
+                "d00372a48f9b9fbc",
+                "67262c4b77ac3071",
+                "b8baf88d90dcf14b",
+                "ab0da91970997ad5"
+            ]
+        ]
+    },
+    {
+        "id": "3cf4e115e7a3dddf",
+        "type": "ui_gauge",
+        "z": "bb6423253111e81f",
+        "name": "",
+        "group": "7970f240a256399c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 600,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d00372a48f9b9fbc",
+        "type": "ui_chart",
+        "z": "bb6423253111e81f",
+        "name": "",
+        "group": "7970f240a256399c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "60",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 620,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67262c4b77ac3071",
+        "type": "ui_text",
+        "z": "bb6423253111e81f",
+        "group": "7970f240a256399c",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "温度",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 610,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "79a899e4eedc29ba",
+        "type": "ui_text",
+        "z": "bb6423253111e81f",
+        "group": "7970f240a256399c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "状態",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 790,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b8baf88d90dcf14b",
+        "type": "function",
+        "z": "bb6423253111e81f",
+        "name": "",
+        "func": "console.log(msg.payload)\n\nif (msg.payload > 25) {\n    \n    msg.payload = '異常'\n} else {\n    msg.payload = '正常'\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 600,
+        "wires": [
+            [
+                "79a899e4eedc29ba",
+                "f33ef724f42c7636"
+            ]
+        ]
+    },
+    {
+        "id": "f33ef724f42c7636",
+        "type": "debug",
+        "z": "bb6423253111e81f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "ab0da91970997ad5",
+        "type": "debug",
+        "z": "bb6423253111e81f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 80,
+        "wires": []
+    }
+]
